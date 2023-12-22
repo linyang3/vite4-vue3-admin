@@ -10,7 +10,7 @@ RUN \
   else npm install; \
   fi
 COPY . .
-RUN npm run build
+RUN npm run build:qa
 
 FROM registry.access.redhat.com/ubi9/nginx-122
 COPY ./nginx.conf /etc/nginx/nginx.conf

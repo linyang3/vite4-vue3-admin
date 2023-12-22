@@ -1,0 +1,65 @@
+<template>
+  <div class="page-container">
+    <div class="text-center">
+      <img src="~@/assets/images/error_images/404.png" alt="" />
+    </div>
+    <div class="text-center">
+      <h1>抱歉，页面丢失了</h1>
+      <el-button type="primary" @click="goHome">回到首页</el-button>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { useRouter } from "vue-router";
+const router = useRouter();
+const goHome = () => {
+  const pathList: string[] = router.getRoutes().map((el: any) => el.path);
+  if (pathList.includes("/content-management")) {
+    router.push("/");
+  } else if (pathList.includes("/content-report")) {
+    router.push("/content-report");
+  } else if (pathList.includes("/user-management")) {
+    router.push("/user-management");
+  } else if (pathList.includes("/role-management")) {
+    router.push("/role-management");
+  } else {
+    router.push("/");
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.page-container {
+  width: 100%;
+  border-radius: 4px;
+  padding: 50px 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  .text-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      color: #666;
+      padding: 20px 0;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  img {
+    width: 550px;
+    margin: 0 auto;
+    transform: translateX(9vw);
+  }
+}
+</style>

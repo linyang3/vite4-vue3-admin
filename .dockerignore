@@ -1,0 +1,17 @@
+node_modules
+.eslintignore
+.eslintrc.cjs
+.gitignore
+.prettierignore
+.prettierrc.json
+.stylelintignore
+.stylelintrc.cjs
+commitlint.config.cjs
+pnpm-lock.yaml
+README.md
+.husky
+.vite
+.vscode
+mock
+scritps
+dist

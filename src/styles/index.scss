@@ -1,0 +1,84 @@
+// 引入清除默认样式
+@import "./reset.scss";
+
+// 滚动条外观设置
+// ::-webkit-scrollbar {
+//   width: 10px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: $base-menu-background;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   width: 10px;
+//   background: yellow;
+//   border-radius: 10px;
+// }
+
+.el-menu {
+  background-color: #fff;
+  --el-menu-hover-bg-color: rgb(243, 243, 245) !important;
+  // padding: 0 10px;
+}
+.el-menu-item {
+  color: #000;
+  font-size: 12px;
+  height: 40px;
+  .el-tooltip__trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+  }
+}
+.el-sub-menu {
+  .el-menu-item {
+    color: #000;
+    font-size: 12px;
+    height: 40px;
+    transform: translateX(-10px);
+    width: 110%;
+  }
+}
+.el-sub-menu__title {
+  color: #000;
+  font-size: 12px;
+  height: 40px;
+  &.el-tooltip__trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+  }
+}
+.el-sub-menu.is-active {
+  color: #d52b1e;
+  background-color: rgb(243, 243, 245);
+ }
+.el-menu-item.is-active {
+ color: #d52b1e;
+ background-color: rgb(243, 243, 245);
+}
+
+.n-base-selection__state-border,
+.n-base-selection__border,
+.n-input__state-border,
+.n-input__border {
+  background-color: rgba(216, 216, 216, 0.1);
+}
+
+// .n-dialog {
+//   margin-top: 140px;
+// }
+.n-date-panel.n-date-panel--datetimerange,
+.n-date-panel {
+  transform: scale(0.8) !important;
+  transform-origin: top left !important;
+}
+
+.n-select-menu {
+  transform: scale(0.8) !important;
+  transform-origin: top left !important;
+  width: 125%;
+}

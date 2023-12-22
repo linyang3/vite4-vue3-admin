@@ -1,18 +1,60 @@
 {
-  "name": "vite4-vue3-admin",
+  "name": "admin",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">= 16.0.0"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite --mode development --open",
+    "build:dev": "vue-tsc && vite build --mode development",
+    "build:qa": "vite build --mode qa",
+    "build:pro": "vite build --mode production",
+    "preview": "vite preview",
+    "lint": "eslint src",
+    "fix": "eslint src --fix",
+    "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
+    "lint:eslint": "eslint src/**/*.{ts,vue} --cache --fix",
+    "commitlint": "commitlint --config commitlint.config.cjs -e -V"
   },
   "dependencies": {
-    "vue": "^3.3.11"
+    "@element-plus/icons-vue": "^2.3.1",
+    "axios": "^1.6.2",
+    "element-plus": "^2.4.3",
+    "file-saver": "^2.0.5",
+    "moment": "^2.29.4",
+    "naive-ui": "^2.35.0",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.9",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.5.2",
-    "vite": "^5.0.8"
+    "@babel/eslint-parser": "^7.23.3",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "@vitejs/plugin-vue": "^4.5.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-vue": "^9.19.1",
+    "husky": "^8.0.3",
+    "mockjs": "^1.1.0",
+    "postcss": "^8.4.31",
+    "postcss-html": "^1.5.0",
+    "postcss-scss": "^4.0.9",
+    "prettier": "^3.1.0",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "typescript": "^5.3.2",
+    "vite": "^4.4.0",
+    "vite-plugin-mock": "3.0.0",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vue-tsc": "^1.8.24"
   }
 }
